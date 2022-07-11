@@ -38,4 +38,17 @@ function hasDuplicates(arr) {
   return false;
 }
 
-module.exports = { push, pop, unshift, shift, hasDuplicates };
+function countLetters(arr) {
+  let letterCount = {};
+  for (let i = 0; i < arr.length; i++) {
+    const letter = arr[i];
+    if (!letterCount[`${letter}`]) {
+      letterCount[`${letter}`] = 1;
+    } else {
+      letterCount[`${letter}`]++;
+    } 
+  }
+  return letterCount;
+}
+
+module.exports = { push, pop, unshift, shift, hasDuplicates, countLetters };
