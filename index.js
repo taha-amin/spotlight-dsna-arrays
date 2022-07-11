@@ -27,4 +27,15 @@ function shift(arr, item) {
   return firstItem;
 }
 
-module.exports = { push, pop, unshift, shift };
+function hasDuplicates(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let x = 0; x < arr.length; x++) {
+      if (arr[i] === arr[x] && x !== i) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+module.exports = { push, pop, unshift, shift, hasDuplicates };
