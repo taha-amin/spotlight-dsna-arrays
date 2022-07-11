@@ -11,10 +11,8 @@ function pop(arr) {
 }
 
 function unshift(arr, item) {
-  let arrTwo = [arr];
-  console.log(arrTwo);
-  for (let i = 0; i < arrTwo.length; i++) {
-    arr[i + 1] = arrTwo[i];
+  for (let i = arr.length; i > 0; i--) {
+    arr[i] = arr[i - 1];
   }
   arr[0] = item;
   return arr.length;
