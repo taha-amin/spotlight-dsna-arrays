@@ -46,7 +46,7 @@ function countLetters(arr) {
       letterCount[`${letter}`] = 1;
     } else {
       letterCount[`${letter}`]++;
-    } 
+    }
   }
   return letterCount;
 }
