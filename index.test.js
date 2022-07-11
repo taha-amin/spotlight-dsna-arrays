@@ -30,7 +30,7 @@ describe("unshift", () => {
 describe("shift", () => {
   it("should remove an element from the beginning of an array", () => {
     const arr = ["a", "b", "c"];
-    expect(shift(arr)).toBe(2);
+    expect(shift(arr)).toBe("a");
     expect(arr.length).toBe(2);
     expect(arr[0]).toBe("b");
   });

@@ -19,13 +19,12 @@ function unshift(arr, item) {
 }
 
 function shift(arr, item) {
-  let arrTwo = [arr];
-  for (let i = arrTwo.length; i >= 0; i--) {
-    arr[i - 1] = arrTwo[i];
+  const firstItem = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i + 1];
   }
-
-  arr[0] = item;
-  return arr.length;
+  arr.length = arr.length - 1;
+  return firstItem;
 }
 
 module.exports = { push, pop, unshift, shift };
