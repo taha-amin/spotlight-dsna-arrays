@@ -4,4 +4,9 @@ function push(arr, item) {
   return arr.length;
 }
 
-module.exports = { push };
+function pop(arr) {
+  arr.length = arr.length - 1
+  return arr.length;
+}
+
+module.exports = { push, pop };
