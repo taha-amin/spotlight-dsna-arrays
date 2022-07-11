@@ -18,4 +18,14 @@ function unshift(arr, item) {
   return arr.length;
 }
 
-module.exports = { push, pop, unshift };
+function shift(arr, item) {
+  let arrTwo = [arr];
+  for (let i = arrTwo.length; i >= 0; i--) {
+    arr[i - 1] = arrTwo[i];
+  }
+
+  arr[0] = item;
+  return arr.length;
+}
+
+module.exports = { push, pop, unshift, shift };
