@@ -10,4 +10,14 @@ function pop(arr) {
   return lastItem;
 }
 
-module.exports = { push, pop };
+function unshift(arr, item) {
+  let arrTwo = [arr];
+  console.log(arrTwo);
+  for (let i = 0; i < arrTwo.length; i++) {
+    arr[i + 1] = arrTwo[i];
+  }
+  arr[0] = item;
+  return arr.length;
+}
+
+module.exports = { push, pop, unshift };

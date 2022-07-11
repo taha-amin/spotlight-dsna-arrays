@@ -1,4 +1,4 @@
-const { push, pop } = require("./index.js");
+const { push, pop, unshift } = require("./index.js");
 
 describe("push", () => {
   it("should add an element to an array", () => {
@@ -15,5 +15,14 @@ describe("pop", () => {
     expect(pop(arr)).toBe('c');
     expect(arr.length).toBe(2);
     expect(arr[1]).toBe("b");
+  });
+})
+
+describe("unshift", () => {
+  it("should add an element to the beginning of an array", () => {
+    const arr = ["a", "b", "c"];
+    expect(unshift(arr, "test")).toBe(4);
+    expect(arr.length).toBe(4);
+    expect(arr[0]).toBe("test");
   });
 });
